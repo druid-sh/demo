@@ -1,7 +1,7 @@
 import { DruidClient } from "@druid-sh/sdk";
 
 if (!process.env.NEXT_PUBLIC_DRUID_API_KEY) {
-  throw new Error("DRUID_API_KEY environment variable not set");
+  throw new Error("NEXT_PUBLIC_DRUID_API_KEY environment variable not set");
 }
 
 export const druid = new DruidClient({
