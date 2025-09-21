@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { druid } from "../client";
-import { generateBlogPostMetadata } from "@druid-sh/sdk";
+import { BlogPost, generateBlogPostMetadata } from "@druid-sh/sdk";
 
 interface BlogPostPageProps {
   params: { slug: string };

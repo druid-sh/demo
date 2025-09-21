@@ -30,9 +30,9 @@ export default function RootLayout({
       >
         <header className="bg-[rgb(0,123,255)] text-white py-4 px-6 shadow-md">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <a href="/" className="text-2xl font-bold">
+            <Link href="/" className="text-2xl font-bold">
               Druid SDK Demo
-            </a>
+            </Link>
             <nav className="flex space-x-6">
               <Link href="/blog" className="hover:underline">
                 Blog
