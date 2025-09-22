@@ -13,7 +13,7 @@ interface BlogPageProps {
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const { page } = await searchParams;
 
-  const data = await druid.getPosts(Number(page), 1);
+  const data = await druid.getPosts(parseInt(page || "1"), 10);
 
   return <BlogList data={data} />;
 }
