@@ -33,11 +33,11 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const postData = await druid.getPost(params.slug);
+  const data = await druid.getPost(params.slug);
 
-  if (!postData.post) {
+  if (!data.post) {
     notFound();
   }
 
-  return <BlogPost postData={postData} />;
+  return <BlogPost data={data} />;
 }

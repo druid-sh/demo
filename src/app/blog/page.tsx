@@ -12,9 +12,8 @@ interface BlogPageProps {
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const { page } = await searchParams;
-  const pageNum = parseInt(page || "1");
 
-  const blogData = await druid.getPosts(pageNum, 1);
+  const data = await druid.getPosts(Number(page), 1);
 
-  return <BlogList blogData={blogData} />;
+  return <BlogList data={data} />;
 }

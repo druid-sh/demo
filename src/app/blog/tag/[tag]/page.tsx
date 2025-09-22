@@ -28,13 +28,12 @@ export default async function BlogTagPage({
   searchParams,
 }: BlogTagPageProps) {
   const { page } = await searchParams;
-  const pageNum = parseInt(page || "1");
 
-  const blogData = await druid.getPostsByTag(params.tag, pageNum);
+  const data = await druid.getPostsByTag(params.tag, Number(page));
 
-  if (blogData.posts.length === 0) {
+  if (data.posts.length === 0) {
     return notFound();
   }
 
-  return <BlogList blogData={blogData} />;
+  return <BlogList data={data} />;
 }
