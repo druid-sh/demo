@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@druid-sh/sdk':
-    specifier: ^1.0.12
-    version: 1.0.12(next@15.5.0)(react@19.1.0)
+    specifier: ^1.0.14
+    version: 1.0.14(next@15.5.0)(react@19.1.0)
   next:
     specifier: 15.5.0
     version: 15.5.0(react-dom@19.1.0)(react@19.1.0)
@@ -50,8 +50,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /@druid-sh/sdk@1.0.12(next@15.5.0)(react@19.1.0):
-    resolution: {integrity: sha512-FmOyNb8aYlbSghCReZBNDeAMBHLzOTdtOnH1tAjJpB+0s15Ws2OIBqgl40igXR6sR4SmPakJ2iPuWW8vMb4jVQ==}
+  /@druid-sh/sdk@1.0.14(next@15.5.0)(react@19.1.0):
+    resolution: {integrity: sha512-B8zwwBUYZ+Jy80HLxAWdNDNdFJR28UDhCRSE2KFFnX8htkrdeB029kRHrkktym+s8tHegIoI+WsPXPbqQhTKyQ==}
     peerDependencies:
       next: ^15.5.0
       react: ^19.1.1

@@ -10,7 +10,9 @@ interface BlogPostPageProps {
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
-  const postData = await druid.getPost(params.slug);
+  const { slug } = await params;
+
+  const postData = await druid.getPost(slug);
 
   if (!postData.post) {
     return {
@@ -33,7 +35,9 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const data = await druid.getPost(params.slug);
+  const { slug } = await params;
+
+  const data = await druid.getPost(slug);
 
   if (!data.post) {
     notFound();

@@ -11,7 +11,8 @@ interface BlogTagPageProps {
 export async function generateMetadata({
   params,
 }: BlogTagPageProps): Promise<Metadata> {
-  const tagData = await druid.getTag(params.tag);
+  const { tag } = await params;
+  const tagData = await druid.getTag(tag);
   return generateBlogListMetadata(`${tagData.name} - Blog - ${druid.siteName}`);
 }
 
