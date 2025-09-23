@@ -28,24 +28,33 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="bg-[rgb(0,123,255)] text-white py-4 px-6 shadow-md">
-          <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold">
-              Druid SDK Demo
-            </Link>
-            <nav className="flex space-x-6">
-              <Link href="/blog" className="hover:underline">
+        <header className="border-b bg-background">
+          <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-6">
+            <div className="flex items-center space-x-6">
+              <Link href="/" className="text-xl font-semibold">
+                Druid SDK Demo
+              </Link>
+              <Link
+                href="/blog"
+                className="text-sm font-medium transition-colors hover:text-primary"
+              >
                 Blog
               </Link>
+            </div>
+            <nav className="flex items-center space-x-6 text-sm font-medium">
               <a
                 href="https://github.com/druid-sh/sdk"
-                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-primary"
               >
                 GitHub
               </a>
               <a
                 href="https://www.npmjs.com/package/@druid-sh/sdk"
-                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-primary"
               >
                 NPM
               </a>
