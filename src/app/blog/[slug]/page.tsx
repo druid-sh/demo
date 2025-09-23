@@ -4,7 +4,7 @@ import { druid } from "../client";
 import { BlogPost, generateBlogPostMetadata } from "@druid-sh/sdk";
 
 interface BlogPostPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({

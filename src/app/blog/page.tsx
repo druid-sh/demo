@@ -7,7 +7,7 @@ export const metadata: Metadata = generateBlogListMetadata(
 );
 
 interface BlogPageProps {
-  searchParams: { page?: string };
+  searchParams: Promise<{ page?: string }>;
 }
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {

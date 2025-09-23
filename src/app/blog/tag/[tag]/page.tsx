@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import { BlogList, generateBlogListMetadata } from "@druid-sh/sdk";
 
 interface BlogTagPageProps {
-  params: { tag: string };
-  searchParams: { page?: string };
+  params: Promise<{ tag: string }>;
+  searchParams: Promise<{ page?: string }>;
 }
 
 export async function generateMetadata({
@@ -29,8 +29,9 @@ export default async function BlogTagPage({
   searchParams,
 }: BlogTagPageProps) {
   const { page } = await searchParams;
+  const { tag } = await params;
 
-  const data = await druid.getPostsByTag(params.tag, parseInt(page || "1"));
+  const data = await druid.getPostsByTag(tag, parseInt(page || "1"));
 
   if (data.posts.length === 0) {
     return notFound();
