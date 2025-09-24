@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@druid-sh/sdk':
-    specifier: ^1.0.31
-    version: 1.0.31(@types/react@19.0.0)(next@15.5.0)(react@19.1.0)(tailwindcss@4.1.12)
+    specifier: ^1.0.34
+    version: 1.0.34(@types/react@19.0.0)(next@15.5.0)(react@19.1.0)(tailwindcss@4.1.12)
   highlight.js:
     specifier: ^11.11.1
     version: 11.11.1
@@ -56,8 +56,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /@druid-sh/sdk@1.0.31(@types/react@19.0.0)(next@15.5.0)(react@19.1.0)(tailwindcss@4.1.12):
-    resolution: {integrity: sha512-E/LQHr0LtwL3Ew02t47ddpTBWbvHHvpb15q0YaHPfcYWWrlFTkRC2wBd/Mbu5nPaHM0eORbqHoDGy6A9QafmUw==}
+  /@druid-sh/sdk@1.0.34(@types/react@19.0.0)(next@15.5.0)(react@19.1.0)(tailwindcss@4.1.12):
+    resolution: {integrity: sha512-Z3oRUC7f8FTvEdrq4ueMQXWgR/kgPXA31EWWXLBY+0g86MOlnHrn7SB7J1ueJRBq2BmCGgh/TaDlgptTsqdNMw==}
     peerDependencies:
       next: ^15.5.0
       react: ^19.1.1
