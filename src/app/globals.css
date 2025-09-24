@@ -2,6 +2,7 @@
 @plugin "@tailwindcss/typography";
 
 @source "../../node_modules/@druid-sh/sdk/dist";
+@import "highlight.js/styles/github-dark.css";
 
 @custom-variant dark (&:is(.dark *));
 
