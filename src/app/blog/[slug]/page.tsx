@@ -27,12 +27,12 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  const { posts } = await druid.getPosts(1, 100);
+  const slugs = await druid.getSlugs();
 
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+  return slugs;
 }
+
+export const revalidate = 60;
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
