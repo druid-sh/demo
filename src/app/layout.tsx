@@ -37,7 +37,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <header className="border-b bg-background">
-            <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-6">
+            <div className="max-w-6xl mx-auto flex h-16 items-center justify-between px-6">
               <div className="flex items-center space-x-6">
                 <Link href="/" className="text-xl font-semibold">
                   Druid Demo
@@ -78,7 +78,7 @@ export default function RootLayout({
               </nav>
             </div>
           </header>
-          {children}
+          <div className="max-w-6xl mx-auto py-4 px-6">{children}</div>
         </ThemeProvider>
       </body>
     </html>
