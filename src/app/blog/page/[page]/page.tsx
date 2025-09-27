@@ -11,13 +11,9 @@ interface BlogPageProps {
 }
 
 export async function generateStaticParams() {
-  const data = await druid.getPosts(1);
+  const data = await druid.getPages();
 
-  const { totalPages } = data.pagination;
-
-  return Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => ({
-    page: String(page),
-  }));
+  return data;
 }
 
 export const revalidate = 60;
