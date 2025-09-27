@@ -52,7 +52,7 @@ export default function RootLayout({
               </div>
               <nav className="md:block hidden items-center space-x-6 text-sm font-medium">
                 <a
-                  href="https://github.com/druid-sh/sdk"
+                  href="https://github.com/druid-sh/demo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-primary"
