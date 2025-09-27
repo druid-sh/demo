@@ -50,7 +50,7 @@ export default function RootLayout({
                 </Link>
                 <AnimatedThemeToggler />
               </div>
-              <nav className="md:block hidden flex items-center space-x-6 text-sm font-medium">
+              <nav className="md:block hidden items-center space-x-6 text-sm font-medium">
                 <a
                   href="https://github.com/druid-sh/sdk"
                   target="_blank"
