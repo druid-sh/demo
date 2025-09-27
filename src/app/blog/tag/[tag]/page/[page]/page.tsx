@@ -6,14 +6,23 @@ export const metadata: Metadata = generateBlogListMetadata(
   `Blog - ${druid.siteName}`
 );
 
-interface BlogHomeProps {
+interface BlogTagPageProps {
   params: Promise<{ page?: string }>;
 }
 
-export const dynamic = "force-static";
+export async function generateStaticParams() {
+  const data = await druid.getPosts(1);
+
+  const { totalPages } = data.pagination;
+
+  return Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => ({
+    page: String(page),
+  }));
+}
+
 export const revalidate = 60;
 
-export default async function BlogHome({ params }: BlogHomeProps) {
+export default async function BlogTagPage({ params }: BlogTagPageProps) {
   const { page } = await params;
 
   const data = await druid.getPosts(parseInt(page || "1"));

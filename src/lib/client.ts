@@ -9,4 +9,5 @@ export const druid = new DruidClient({
   basePath: "/blog",
   siteName: "Druid Demo",
   projectId: "cmfuwykoc0000tr0cilyke3ld",
+  paginationLimit: 10,
 });

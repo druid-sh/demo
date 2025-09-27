@@ -1,16 +1,15 @@
-import { Metadata } from "next";
-import { druid } from "../../client";
-import { notFound } from "next/navigation";
+import { druid } from "@/lib/client";
 import { BlogList, generateBlogListMetadata } from "@druid-sh/sdk";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-interface BlogTagPageProps {
+interface BlogTagHomeProps {
   params: Promise<{ tag: string }>;
-  searchParams: Promise<{ page?: string }>;
 }
 
 export async function generateMetadata({
   params,
-}: BlogTagPageProps): Promise<Metadata> {
+}: BlogTagHomeProps): Promise<Metadata> {
   const { tag } = await params;
   const tagData = await druid.getTag(tag);
   return generateBlogListMetadata(`${tagData.name} - Blog - ${druid.siteName}`);
@@ -26,14 +25,10 @@ export async function generateStaticParams() {
 
 export const revalidate = 60;
 
-export default async function BlogTagPage({
-  params,
-  searchParams,
-}: BlogTagPageProps) {
-  const { page } = await searchParams;
+export default async function BlogTagHome({ params }: BlogTagHomeProps) {
   const { tag } = await params;
 
-  const data = await druid.getPostsByTag(tag, parseInt(page || "1"));
+  const data = await druid.getPostsByTag(tag, 1);
 
   if (data.posts.length === 0) {
     return notFound();
