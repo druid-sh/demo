@@ -18,5 +18,7 @@ export default async function BlogHome({ params }: BlogHomeProps) {
 
   const data = await druid.getPosts(parseInt(page || "1"));
 
+  console.log({ data });
+
   return <BlogList data={data} />;
 }

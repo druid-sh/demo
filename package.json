@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@druid-sh/sdk": "^1.0.51",
+    "@druid-sh/sdk": "^1.0.52",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "highlight.js": "^11.11.1",

@@ -7,7 +7,7 @@ export const metadata: Metadata = generateBlogListMetadata(
 );
 
 interface BlogTagPageProps {
-  params: Promise<{ page?: string }>;
+  params: Promise<{ tag: string; page?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -23,9 +23,9 @@ export async function generateStaticParams() {
 export const revalidate = 60;
 
 export default async function BlogTagPage({ params }: BlogTagPageProps) {
-  const { page } = await params;
+  const { tag, page } = await params;
 
-  const data = await druid.getPosts(parseInt(page || "1"));
+  const data = await druid.getPostsByTag(tag, parseInt(page || "1"));
 
   return <BlogList data={data} />;
 }
