@@ -78,7 +78,7 @@ export default function RootLayout({
               </nav>
             </div>
           </header>
-          <div className="max-w-6xl mx-auto py-4 px-6">{children}</div>
+          <div className="max-w-6xl mx-auto py-8 px-6">{children}</div>
         </ThemeProvider>
       </body>
     </html>

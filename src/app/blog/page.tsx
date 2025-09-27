@@ -1,6 +1,6 @@
-import { Metadata } from "next";
-import { druid } from "./client";
 import { BlogList, generateBlogListMetadata } from "@druid-sh/sdk";
+import type { Metadata } from "next";
+import { druid } from "./client";
 
 export const metadata: Metadata = generateBlogListMetadata(
   `Blog - ${druid.siteName}`
