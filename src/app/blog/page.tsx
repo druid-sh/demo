@@ -11,7 +11,7 @@ interface BlogHomeProps {
 }
 
 export const dynamic = "force-static";
-export const revalidate = druid.revalidate;
+export const revalidate = 60;
 
 export default async function BlogHome({ params }: BlogHomeProps) {
   const { page } = await params;

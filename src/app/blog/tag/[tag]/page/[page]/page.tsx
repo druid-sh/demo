@@ -16,7 +16,7 @@ export async function generateStaticParams() {
   return pages;
 }
 
-export const revalidate = druid.revalidate;
+export const revalidate = 60;
 
 export default async function BlogTagPage({ params }: BlogTagPageProps) {
   const { tag, page } = await params;
