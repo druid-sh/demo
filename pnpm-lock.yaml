@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@druid-sh/sdk':
-    specifier: ^1.0.58
-    version: 1.0.58(@types/react@19.0.0)(next@15.5.0)(react@19.1.0)(tailwindcss@4.1.12)
+    specifier: ^1.1.0
+    version: 1.1.0(@types/react@19.0.0)(next@15.5.0)(react@19.1.0)(tailwindcss@4.1.12)
   class-variance-authority:
     specifier: ^0.7.1
     version: 0.7.1
@@ -74,8 +74,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /@druid-sh/sdk@1.0.58(@types/react@19.0.0)(next@15.5.0)(react@19.1.0)(tailwindcss@4.1.12):
-    resolution: {integrity: sha512-TamvGkwK4RQyI/684KRdx8kOrL9bzZLP4D1thCUMqwtMOqH/7xGlR/RlQMhdbB+VtmG5343Xc740777brr92Bw==}
+  /@druid-sh/sdk@1.1.0(@types/react@19.0.0)(next@15.5.0)(react@19.1.0)(tailwindcss@4.1.12):
+    resolution: {integrity: sha512-tq4mI+NnRNFVcMO5uYiRrjPlap4N9sTWPxm60bt+yeMYln7vQfix1Ks+QJK2agtSz4dVy07ckIKMQChR2xdkIA==}
     peerDependencies:
       next: ^15.5.0
       react: ^19.1.1
