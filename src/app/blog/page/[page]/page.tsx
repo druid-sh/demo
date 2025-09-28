@@ -11,12 +11,12 @@ interface BlogPageProps {
 }
 
 export async function generateStaticParams() {
-  const data = await druid.getPages();
+  const pages = await druid.getPages();
 
-  return data;
+  return pages;
 }
 
-export const revalidate = 60;
+export const revalidate = druid.revalidate;
 
 export default async function BlogPage({ params }: BlogPageProps) {
   const { page } = await params;

@@ -32,7 +32,7 @@ export async function generateStaticParams() {
   return slugs;
 }
 
-export const revalidate = 60;
+export const revalidate = druid.revalidate;
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;

@@ -23,7 +23,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export const revalidate = 60;
+export const revalidate = druid.revalidate;
 
 export default async function BlogTagHome({ params }: BlogTagHomeProps) {
   const { tag } = await params;
